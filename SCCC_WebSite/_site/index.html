@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-capable" content="yes">
+<meta name="viewport" content="with=device-width, initial-scale=1">
+<link rel="import" href="/path/to/imports/stuff.html">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="CSS/Style-header.css">
+<link rel="stylesheet" href="CSS/Style-footer.css">
+<link rel="stylesheet" href="CSS/Style-remainingSalary.css">
+<link rel="stylesheet" href="CSS/Style-media.css">
+<link rel="stylesheet" href="CSS/Style-socialMedia.css">
+
+
+<title>SCCC</title>
+ 
+</head>
+<body>
+<section class="s-section">
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
+  
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<nav class="social">
+          <ul class="s-ul">
+              <li class="s-li"><a class="s-a" href="https://mobile.twitter.com/SaudiClubatSUU">Twitter <i class="fa fa-twitter"></i></a></li>
+              <li class="s-li"><a class="s-a" href="https://www.facebook.com/suussc">Facebook <i class="fa fa-facebook-square"></i></a></li>
+               <li class="s-li"><a class="s-a" href="https://www.facebook.com/groups/260192827339138/">F-Groub <i class="fa fa-facebook"></i></a></li>
+              <li class="s-li"><a class="s-a" href="https://www.instagram.com/saudic.suu/">Instagram <i class="fa fa-instagram"></i></a></li>
+              
+          </ul>
+      </nav>
+        
+ <header>
+
+	<h1 class="h-h1"><center>Saudi Club in Cedar City</center></h1>
+		
+	
+	<nav>
+	<ul>
+	<a href="#"><b><li>ABOUT</li></b></a>
+	<a href="#"><b><li>EVENTS</li></b></a>
+	<a href="#"><b><li>SHOP</li></b></a>
+	<a href="/index-contactUs.html"<b><li>CONTACT US</li></b></a>
+	</ul>
+	<div class="icon" onclick="myFunction(this)">
+	  <div class="bar1"></div>
+	  <div class="bar2"></div>
+	  <div class="bar3"></div>
+	</div>
+	</nav>
+	
+	
+	<h2 class="h-h2"><center>Saudi Club at Southern Utah University, Cedar City</center></h2>
+	
+	<h3 class="h-h3"><center>Cultural // Social // Entertaining</center></h3>
+	
+  </header>
+ 
+ 
+
+ 
+
+  
+ <p>;kbjvkbsivbieusBVIebiubweIUVBIVB
+ JKBVIbvw
+ BLJHVbvobIVB
+ </p>
+   <section class="t-section">
+
+<h1 class="t-h1">Remaining Salary</h1>
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+</section>
+
+<script type="text/javascript">
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 1 * 1 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+
+</script>
+ 
+ 
+
+ <footer>
+ 
+ <h1 class="f-h1"><center>Saudi Club in Cedar City</center></h1>
+ 
+ <div class="f-content">
+ <a href="#"><b><li class="f-li">ABOUT</li></b></a>
+ <a href="#"><b><li class="f-li">EVENTS</li></b></a>
+ <a href="#"><b><li class="f-li">SHOP</li></b></a>
+ <a href="footer.html"><b><li class="f-li">CONTACT US</li></b></a>
+ </div>
+ 
+ <h2 class="f-copyright">Copyright © 2016 Saudi Club in Cedar City. All rights reserved.</h2>
+ 
+ 
+ </footer>
+
+</body>
+<script>
+	$('.icon').on('click', function(){
+	$('nav ul').toggleClass('showing');
+});
+</script>
+
+<script>function myFunction(x) {
+    x.classList.toggle("change");
+}
+</script>
+</html>
